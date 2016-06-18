@@ -2,9 +2,11 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.example.lazyboy.recycle_view.Info_activity"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
@@ -18,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
@@ -63,15 +66,14 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/movie_title-head"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
                         android:text="Title"
+                        android:textStyle="bold"
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/movie_title"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
@@ -80,7 +82,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/movie_release-date-head"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
@@ -88,7 +89,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/movie-release-date"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
@@ -97,7 +97,6 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/movie_rating-head"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
@@ -128,23 +127,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@android:drawable/btn_star" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@android:drawable/btn_star"
-                            />
+                            android:src="@android:drawable/btn_star" />
                     </LinearLayout>
+
                     <TextView
-                        android:id="@+id/mov_overview-head"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
-                        android:text="Overview"
                         android:padding="8dp"
+                        android:text="Overview"
                         android:textSize="24sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
-                        android:id="@+id/mov-overview-detail-date"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="8dp"
@@ -152,82 +151,82 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="The Conjuring 2 is a 2016 American supernatural horror film directed by James Wan and written by Carey Hayes, Chad Hayes, Wan and David Leslie Johnson."
-                        android:textSize="18sp"/>
+                        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/movie-comment-head"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:text="Comments"
-                android:padding="8dp"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginLeft="16dp"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_btn_speak_now"
-                    android:layout_margin="8dp"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                       <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Reno"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    />
-                       <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Arlo and Spot's adventure to the clawtooth Mountain,
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:padding="8dp"
+                        android:text="Comments"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:src="@android:drawable/ic_btn_speak_now" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Reno"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Arlo and Spot's adventure to the clawtooth Mountain,
                     TO be honest , I have been looking forward this since the day i came to  know about it.But it took so long to come out, even the window OS has.
                     "
 
-                    />
-                </LinearLayout>
+                                />
+                        </LinearLayout>
 
 
-            </LinearLayout>
-            <TextView
-                android:id="@+id/mov_trailers-head"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                    </LinearLayout>
 
-                android:text="Trailers"
-                android:padding="8dp"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_margin="8dp"
-                >
-               <ImageView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@android:drawable/ic_media_play"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Trailers"
-                    android:padding="8dp"
-                    android:layout_marginBottom="24dp"/>
+                        android:padding="8dp"
+                        android:text="Trailers"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@android:drawable/ic_media_play" />
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:padding="8dp"
+                            android:text="Trailers" />
+
+                    </LinearLayout>
 
 
                 </LinearLayout>

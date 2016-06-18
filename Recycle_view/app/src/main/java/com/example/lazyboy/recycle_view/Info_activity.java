@@ -14,8 +14,10 @@ public class Info_activity extends AppCompatActivity {
 
         Toolbar toolBar = (Toolbar) findViewById(R.id.MyToolbar);
         setSupportActionBar(toolBar);
-        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar);
-        collapsingToolbarLayout.setTitle("my toolbar");
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar);
+        collapsingToolbarLayout.setTitle("collapse_toolbar");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
     }

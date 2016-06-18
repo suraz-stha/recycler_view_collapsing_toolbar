@@ -11,6 +11,10 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'MOVIE_BASE_URL', '"https://api.themoviedb.org/"'
+
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -27,5 +31,7 @@ dependencies {
     compile 'com.android.support:cardview-v7:24.0.0-alpha1'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
-
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
 }

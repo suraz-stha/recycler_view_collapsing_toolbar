@@ -6,27 +6,30 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/main_view"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="start">
 
         <ImageView
             android:id="@+id/country_photo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#aa33de"
+            android:layout_height="240dp"
             android:contentDescription="Settings"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <TextView
+            android:layout_marginTop="8dp"
             android:id="@+id/country_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/country_photo"
-            android:background="#1976D2"
+           android:layout_centerInParent="true"
             android:gravity="center_horizontal"
             android:paddingBottom="8dp"
             android:text="Hello world"
-            android:textColor="#ffffff"
+            android:textColor="#0b1838"
             android:textSize="13sp" />
 
     </RelativeLayout>
